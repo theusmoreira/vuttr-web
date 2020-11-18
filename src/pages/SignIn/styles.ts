@@ -25,7 +25,7 @@ export const Content = styled.div`
 
   form {
     width: 100%;
-    max-width: 334px;
+    max-width: 370px;
     a {
       display: flex;
       align-items: center;

@@ -21,7 +21,7 @@ export const Content = styled.div`
 
   form {
     width: 100%;
-    max-width: 334px;
+    max-width: 370px;
 
     h1 {
       margin-bottom: 16px;
