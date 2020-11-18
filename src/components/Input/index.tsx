@@ -50,7 +50,7 @@ const Input: React.FC<InputProps> = ({
   return (
     <Container
       style={containerStyle}
-      isErrored
+      isErrored={!!error}
       isField={isField}
       isFocused={isFocus}
     >
