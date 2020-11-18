@@ -1,9 +1,13 @@
 import React from 'react';
+import AppProvider from './hooks';
+import SignIn from './pages/SignIn';
+import GlobalStyle from './styles/Global';
 
 const App: React.FC = () => (
-  <div className="App">
-    <h1>Olá mundo</h1>
-  </div>
+  <AppProvider>
+    <GlobalStyle />
+    <SignIn />
+  </AppProvider>
 );
 
 export default App;
