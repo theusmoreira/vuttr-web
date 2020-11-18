@@ -1,13 +1,17 @@
 import React, { useCallback, useRef } from 'react';
 import { Form } from '@unform/web';
-import { FiLock, FiMail } from 'react-icons/fi';
+import { FiArrowRight, FiLock, FiMail } from 'react-icons/fi';
 import * as Yup from 'yup';
 import { FormHandles } from '@unform/core';
-import Input from '../../components/Input';
+import { Link } from 'react-router-dom';
 
 import { Container, Content } from './styles';
+
 import getValidationErrors from '../../utils/getValidationErrors';
 import { useAuth } from '../../hooks/Auth';
+
+import Button from '../../components/Button';
+import Input from '../../components/Input';
 
 interface SignInFormData {
   email: string;
@@ -58,7 +62,11 @@ const SignIn: React.FC = () => {
             type="password"
             placeholder="Password"
           />
-          <button type="submit">SignIn</button>
+          <Button type="submit">Sign In</Button>
+          <Link to="/signup">
+            <FiArrowRight size={16} color="#170C3A" />
+            <span>I don&apos;t have a registration</span>
+          </Link>
         </Form>
       </Content>
     </Container>
